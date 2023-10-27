@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --light: #f6f6f9;
+    --primary: #1976D2;
+    --light-primary: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #363949;
+    --danger: #D32F2F;
+	--light-danger: #FECDD3;
+    --warning: #FBC02D;
+    --light-warning: #FFF2C6;
+    --success: #388E3C;
+    --light-success: #BBF7D0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bx{
+    font-size: 1.7rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+
+
+.header .logo{
+    font-size: 24px;
+    font-weight: 700;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    z-index: 500;
+    padding-bottom: 20px;
+    box-sizing: header-box;
+}
+/* mau ten cua page */
+.header .logo .logo-name span.hch{
+    color: var(--danger);
+    font-size: 20px;
+   
+}
+.header .logo .logo-name span{
+    
+    color: var(--dark);
+    font-size: 30px;
+}
+
+.header .logo .bx{
+    min-width: 60px;
+    display: flex;
+    justify-header: center;
+    font-size: 2.2rem;
+}
+.header .logo img{
+    width: 3rem;
+    height: 3rem;
+}
+
+/* start header kich thuoc vung header*/
+
+
+.header nav{
+    height: 56px;
+    background: var(--light);
+    padding: 0 24px 0 0;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header nav::before{
+    header: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: -20px -20px 0 var(--light);
+}
+
+.header nav a{
+    color: var(--dark);
+}
+
+.header nav .bx.bx-menu{
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.header nav form{
+    max-width: 400px;
+    width: 100%;
+    margin-right: auto;
+}
+
+.header nav form .form-input{
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+
+.header nav form .form-input input{
+    flex-grow: 1;
+    padding: 0 16px;
+    height: 100%;
+    border: none;
+    background: var(--grey);
+    border-radius: 36px 0 0 36px;
+    outline: none;
+    width: 100%;
+    color: var(--dark);
+}
+
+.header nav form .form-input button{
+    width: 80px;
+    height: 100%;
+    display: flex;
+    justify-header: center;
+    align-items: center;
+    background: var(--danger);
+    color: var(--light);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 0 36px 36px 0;
+    cursor: pointer;
+}
+
+.header nav .notif{
+    font-size: 20px;
+    position: relative;
+}
+
+.header nav .notif .count{
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    background: var(--danger);
+    border-radius: 50%;
+    color: var(--light);
+    border: 2px solid var(--light);
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-header: center;
+}
+
+.header nav .profile img{
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+ /* phan menu so xuong tu user */
+.sub_menu_wrap{
+  position: absolute;
+  top: 100%;  
+  right: 1%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  z-index: 1;
+  width: 200px;
+  
+}
+/* mo menu  */
+.sub_menu_wrap.open_menu{
+    max-height: 400px;
+}
+/* day la o mo xuong tu user */
+.sub_menu{
+    background: var(--dark);
+    padding: 25px; /*khoang cach le hai ben so voi cai canh bang*/
+    margin: 5px;
+   
+}
+.user_info{
+    display: flex;
+    align-items: center;
+    color: #eceaff;
+
+}
+.user_info h3 {
+    font-weight: 500;
+}
+
+.sub_menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+.sub_menu_link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+/* mau chu trong o menu so xuong */
+.sub_menu_link p{
+    width: 100%;
+    color: #eceaff;
+}
+/* day la cai dau > */
+.sub_menu_link span{
+    font-size: 22px;
+    color: #eceaff;
+}
+.sub_menu_link:hover span{
+    transform: translateX(5px);
+}
+.sub_menu_link:hover p {
+font-weight: 600;
+}
+
+
+
+/* <!-- START PHAN CAC NUT DUOI HEADER  --> */
+
+.menu_container{
+
+    width: 100%;
+    min-height: 100vh;
+    background: #eceaff;
+    color: #525252;
+    z-index: -1;
+
+
+}
+
+.menu_container nav{
+    height: 56px;
+    background: var(--light);
+    padding: 0 24px 0 0;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+}
+
+.menu_container nav::before{
+    header: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: -20px -20px 0 var(--light);
+}
+
+.menu_container nav ul{
+    width: 100%;
+    text-align: center;
+    
+}
+.menu_container nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+.menu_container nav ul a {
+    color: var(--dark);
+    text-decoration: none;
+
+}
+
+
+/* <!-- END PHAN CAC NUT DUOI HEADER  --> */

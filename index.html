@@ -1,11 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>New Reading</title>
 </head>
+
 <body>
-    <h1>NgoDinhHuy</h1>
+    <!--START _ HEADER-HEADER-HEADER-HEADER-HEADER -->
+    <div class="header">
+        <!-- Navbar -->
+        <nav>
+    
+                <a href="#" class="logo">
+                    <img src="images/logo.png">
+                    <div class="logo-name"><span>NEWREADING</span> <span class="hch">HCH</span></div>
+                </a>
+        
+
+
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">1121212</span>
+            </a>
+
+            <a href="#" class="profile">
+                <img src="images/logo.png" class="user_pic" onclick="toggleMenu()">
+            </a>
+           
+            
+
+            <div class="sub_menu_wrap" id="subMenu">
+                <div class="sub_menu">
+                    <div class="user_info">
+                        <!-- <img src="#"> them hinh anh  -->
+                        <h2>Name User </h2>
+                    </div>
+                    <hr>
+                       <!-- cac muc duoi menu -->
+                    <a href="" class="sub_menu_link">
+                        <p>Sign In</p>
+                        <span>></span>
+                    </a>
+                    <a href="" class="sub_menu_link">
+                        <p>Sign Up </p>
+                        <span>></span>
+                    </a>
+                    <a href="" class="sub_menu_link">
+                        <p>Log Out</p>
+                        <span>></span>
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+        <!-- End of Navbar -->
+    </div>
+ <!--END _ HEADER-HEADER-HEADER-HEADER-HEADER -->
+
+<!-- START PHAN CAC NUT DUOI HEADER  -->
+<div class="menu_container">
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home Page </a></li>
+            <li><a href="#">Category </a></li>
+
+
+
+
+        </ul>
+    </nav>
+  
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<!-- END PHAN CAC NUT DUOI HEADER  -->
+
+    <script src="index.js"></script>
+    <script>
+        let subMenu=document.getElementById("subMenu");
+        function toggleMenu()
+        {
+            subMenu.classList.toggle("open_menu");
+        }
+    </script>
 </body>
+
 </html>
