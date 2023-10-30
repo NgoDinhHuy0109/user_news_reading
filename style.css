@@ -51,7 +51,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Roboto",serif;
 }
 
 .bx{
@@ -70,9 +70,9 @@ html{
     overflow-x: hidden;
 }
 
+/* start style cac phan tu tren thanh header mau ten cua page */
 
-
-.header .logo{
+.header .logo{ /* bao gom : lo go; ten page */
     font-size: 24px;
     font-weight: 700;
     height: 56px;
@@ -82,12 +82,18 @@ html{
     z-index: 500;
     padding-bottom: 20px;
     box-sizing: header-box;
+    margin-left: 10px; 
 }
-/* mau ten cua page */
+
+.header .logo img{
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 10px;  
+}
+
 .header .logo .logo-name span.hch{
     color: var(--color-danger);
     font-size: 20px;
-   
 }
 .header .logo .logo-name span{
     
@@ -101,14 +107,9 @@ html{
     justify-header: center;
     font-size: 2.2rem;
 }
-.header .logo img{
-    width: 3rem;
-    height: 3rem;
-}
+
 
 /* start header kich thuoc vung header*/
-
-
 .header nav{
     height: 56px;
     background: var(--light);
@@ -277,10 +278,10 @@ font-weight: 600;
 
 
 /* <!-- START PHAN CAC NUT DUOI HEADER  --> */
-
+ /* nav la cai ben trong cai class menucontaine */
 .menu_container{
     width: 100%;
-    min-height: 100vh;
+    min-height: 1vh; 
     background: #eceaff;
     color: #525252;
     z-index: -1;
@@ -356,3 +357,43 @@ font-weight: 600;
 
 
 /* <!-- END PHAN CAC NUT DUOI HEADER  --> */
+
+/* <!-- START STYLE  NEWS_LIST --> */
+
+.list_container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+
+}
+.news_list{
+    display: flex; /*chia doi trai phai cot hinh mot ben chu mot ben */
+    width: 826px;
+    height: 158px;
+    margin-bottom: 20px;
+}
+.left{
+    width: 250px;
+    margin-right: 15px;
+
+}
+.right{
+    width: 564px;
+    height: 133px;
+
+}
+.news_list .left img {
+    width: 240px;
+    height: 148px;
+    border-radius: 10px;
+
+}
+.news_list .right img{
+    width:20px;
+    height:20px;
+    border:1px solid var(--color-danger);
+
+
+}
+/* <!-- END STYLE NEWS_LIST --> */
