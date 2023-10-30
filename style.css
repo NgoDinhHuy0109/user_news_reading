@@ -358,20 +358,126 @@ font-weight: 600;
 
 /* <!-- END PHAN CAC NUT DUOI HEADER  --> */
 
-/* <!-- START STYLE  NEWS_LIST --> */
 
+/* <!-- <!-- START 2 bai bao dau tien xep ngang nhau --> --> */
+
+
+.fist_container{
+    display: grid;
+    grid-template-columns: 580px 300px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+.news_1{
+    width: 545px;
+    height: 464px;
+}
+.top{
+    width: 545px;
+    margin-right: 15px;
+}
+.bottom{
+    width: 545px;
+    height: 86px;
+}
+.news_1 .top img {
+    width: 545px;
+    height: 337px;
+    border-radius: 10px;
+
+}
+.news_1 .bottom img{
+    width:20px;
+    height:20px;
+    border:1px solid var(--color-danger);
+
+
+}
+/* bai bao thu 2  */
+
+.news_2{
+    width: 264px;
+    height: 464px;
+}
+.top_2{
+    width: 264px;
+    margin-right: 15px;
+}
+.bottom_2{
+    width: 264px;
+    height: 268px;
+}
+.news_2 .top_2 img {
+    width: 264px;
+    height: 163px;
+    border-radius: 10px;
+
+}
+.news_2 .bottom_2 img{
+    width:20px;
+    height:20px;
+    border:1px solid var(--color-danger);
+
+
+}
+
+
+/* <!-- <!-- end 2 bai bao dau tien xep ngang nhau --> --> */
+
+
+/* <!-- START 3 bai bao TIEP THEO xep ngang nhau  --> */
+.second_container{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+/* bai bao thu 1  */
+.second_1{
+    width: 264px;
+    height: 464px;
+}
+.top_second{
+    width: 264px;
+    margin-right: 15px;
+}
+.bottom_second{
+    width: 264px;
+    height: 268px;
+}
+.second_1 .top_second img {
+    width: 264px;
+    height: 163px;
+    border-radius: 10px;
+
+}
+.second_1 .bottom_second img{
+    width:20px;
+    height:20px;
+    border:1px solid var(--color-danger);
+
+
+}
+
+/* <!-- END 3 bai bao TIEP THEO xep ngang nhau  --> */
+
+/* <!-- START STYLE  NEWS_LIST --> */
 .list_container{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
-
 }
 .news_list{
     display: flex; /*chia doi trai phai cot hinh mot ben chu mot ben */
     width: 826px;
     height: 158px;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 .left{
     width: 250px;
@@ -381,19 +487,15 @@ font-weight: 600;
 .right{
     width: 564px;
     height: 133px;
-
 }
 .news_list .left img {
     width: 240px;
     height: 148px;
     border-radius: 10px;
-
 }
 .news_list .right img{
     width:20px;
     height:20px;
     border:1px solid var(--color-danger);
-
-
 }
 /* <!-- END STYLE NEWS_LIST --> */
