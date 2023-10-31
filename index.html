@@ -28,7 +28,7 @@
             <label for="theme-toggle" class="theme-toggle"></label>
             <a href="#" class="notif">
                 <i class='bx bx-bell'></i>
-                <span class="count">1121212</span>
+                <span class="count">1</span>
             </a>
             <a href="#" class="profile">
                 <img src="images/logo.png" class="user_pic" onclick="toggleMenu()">
@@ -122,9 +122,9 @@
 
 
     <div class="second_1">
-        <div class="top_second"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8168933_cover-re.jpg" alt=""></div>
+        <div class="top_second"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8164810_Cover-dat-bike.jpg" alt=""></div>
         <div class="bottom_second">
-            <h3>Chơi Resident Evil Village trên iPhone 15 Pro Max: Vẫn chỉ có Capcom là thương Apple nhất</h3>
+            <h3>Dat Bike Quantum - bước tiến mới trong ngành công nghiệp xe điện tại Việt Nam</h3>
              <a target="_blank" href="https://tinhte.vn/profile/pw.2452461/" rel="noreferrer" class="jsx-1509373995">
                 <img src="https://photo2.tinhte.vn/data/avatars/m/2452/2452461.jpg?1653405194" >
                 <span class="jsx-3594291015 author">P.W</span>
@@ -144,13 +144,9 @@
              </a>
         </div>
     </div>
-
-
-
 </div>
 
 <!-- END 3 bai bao TIEP THEO xep ngang nhau  -->
-
 
 <!-- START NEWS_LIST -->
 <div class="list_container">
@@ -216,6 +212,17 @@
         {
             subMenu.classList.toggle("open_menu");
         }
+        // Thêm sự kiện click cho toàn bộ tài liệu (document)
+    document.addEventListener("click", function(event) {
+        if (!subMenu.contains(event.target) && event.target !== document.querySelector(".user_pic")) 
+        {
+            // Kiểm tra nếu người dùng click ra ngoài menu hoặc không phải là phần tử ".user_pic"
+            subMenu.classList.remove("open_menu"); // Đóng menu
+        } });
+        
+
+
+
     </script>
 <!-- END JS cho hieu ung so xuong thanh men nu user -->
 </body>

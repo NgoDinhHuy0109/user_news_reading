@@ -353,19 +353,15 @@ font-weight: 600;
     transform: scaleX(1); /* Increase the line width to 100% on hover */
 }
 /* ..................end hieu ung hover chuot cua cac menu .................. */
-
-
-
 /* <!-- END PHAN CAC NUT DUOI HEADER  --> */
 
 
 /* <!-- <!-- START 2 bai bao dau tien xep ngang nhau --> --> */
-
-
 .fist_container{
     display: grid;
     grid-template-columns: 580px 300px;
     max-width: 1200px;
+    max-height: 450px;
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
@@ -383,6 +379,11 @@ font-weight: 600;
     width: 545px;
     height: 86px;
 }
+.bottom h3:hover {
+    /* Kiểu dáng khi hover */
+    color: #ff0000; /* Màu văn bản khi hover */
+    cursor: pointer;
+}
 .news_1 .top img {
     width: 545px;
     height: 337px;
@@ -390,11 +391,10 @@ font-weight: 600;
 
 }
 .news_1 .bottom img{
-    width:20px;
-    height:20px;
+    width:32px;
+    height:32px;
     border:1px solid var(--color-danger);
-
-
+    border-radius: 100%;
 }
 /* bai bao thu 2  */
 
@@ -410,6 +410,13 @@ font-weight: 600;
     width: 264px;
     height: 268px;
 }
+.bottom_2 h3:hover {
+    /* Kiểu dáng khi hover */
+    color: #ff0000; /* Màu văn bản khi hover */
+    cursor: pointer;
+ 
+}
+
 .news_2 .top_2 img {
     width: 264px;
     height: 163px;
@@ -417,14 +424,11 @@ font-weight: 600;
 
 }
 .news_2 .bottom_2 img{
-    width:20px;
-    height:20px;
-    border:1px solid var(--color-danger);
-
-
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border:0.4px solid var(--color-danger);
 }
-
-
 /* <!-- <!-- end 2 bai bao dau tien xep ngang nhau --> --> */
 
 
@@ -433,6 +437,7 @@ font-weight: 600;
     display: grid;
     grid-template-columns: 300px 300px 300px;
     max-width: 1200px;
+    max-height: 310px;
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
@@ -450,6 +455,12 @@ font-weight: 600;
     width: 264px;
     height: 268px;
 }
+.bottom_second h3:hover {
+    /* Kiểu dáng khi hover */
+    color: #ff0000; /* Màu văn bản khi hover */
+    cursor: pointer;
+ 
+}
 .second_1 .top_second img {
     width: 264px;
     height: 163px;
@@ -457,11 +468,10 @@ font-weight: 600;
 
 }
 .second_1 .bottom_second img{
-    width:20px;
-    height:20px;
-    border:1px solid var(--color-danger);
-
-
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border:0.4px solid var(--color-danger);
 }
 
 /* <!-- END 3 bai bao TIEP THEO xep ngang nhau  --> */
@@ -488,14 +498,22 @@ font-weight: 600;
     width: 564px;
     height: 133px;
 }
+
+.right h3:hover {
+    /* Kiểu dáng khi hover */
+    color: #ff0000; /* Màu văn bản khi hover */
+    cursor: pointer;
+ 
+}
 .news_list .left img {
     width: 240px;
     height: 148px;
     border-radius: 10px;
 }
 .news_list .right img{
-    width:20px;
-    height:20px;
-    border:1px solid var(--color-danger);
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border:0.4px solid var(--color-danger);
 }
 /* <!-- END STYLE NEWS_LIST --> */
