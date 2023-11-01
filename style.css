@@ -69,6 +69,26 @@ li{
 html{
     overflow-x: hidden;
 }
+
+/* style hinh anh cua anh tac gia va ten tac gia */
+.jsx-1509373995 {
+    display: flex;
+    align-items: center;
+  }
+
+  .jsx-1509373995 img {
+    margin-right: 10px; /* Thay đổi khoảng cách giữa hình ảnh và chữ P.W.abcdef theo mong muốn của bạn */
+  }
+
+  .jsx-1509373995 .author {
+    flex: 1;
+    text-align: center;
+  }
+.author {
+    color:#0a0a0a;
+    display: flex;
+    align-items: center;
+  }
 /* start style cac phan tu tren thanh header mau ten cua page */
 
 .header .logo{ /* bao gom : lo go; ten page */
