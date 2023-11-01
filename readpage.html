@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>New Reading</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+    <!--START _ HEADER-HEADER-HEADER-HEADER-HEADER -->
+    <div class="header">
+        <!-- Navbar -->
+        <nav>
+                <a href="#" class="logo">
+                    <img src="images/logo.png">
+                    <div class="logo-name"><span>NewsReading</span> <span class="hch">HCH</span></div>
+                </a>  
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">1</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="images/logo.png" class="user_pic" onclick="toggleMenu()">
+            </a>
+            <div class="sub_menu_wrap" id="subMenu">
+                <div class="sub_menu">
+                    <div class="user_info">
+                        <!-- <img src="#"> them hinh anh  -->
+                        <h2>Name User </h2>
+                    </div>
+                    <hr>
+                       <!-- cac muc duoi menu -->
+                    <a href="" class="sub_menu_link">
+                        <p>Sign In</p>
+                        <span>></span>
+                    </a>
+                    <a href="" class="sub_menu_link">
+                        <p>Sign Up </p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- End of Navbar -->
+    </div>
+ <!--END _ HEADER-HEADER-HEADER-HEADER-HEADER -->
+
+    <!-- START BAI BAO BEN TRAI  -->
+ <div class="main_article">  <!-- /*phan nen mau xam to ben ngoai*/ -->
+    <div class="container_article">  <!-- phan ben trong nen mau trang bao  -->
+        <!-- phan ben trai cho noi dung doc bao  -->
+        <div class="container_article_left">
+            <div class="fist_link">
+                <div class="fist_link_wrapper">
+                        <a href="#" class="jsx-89440 label">Trang Chủ</a><span>></span>
+                        <a href="#" class="jsx-89440 label">Xe hai bánh</a>
+                </div>
+                <div class="jsx-2305813501">
+                    <div class="jsx-2305813501"> </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        <!-- end phan ben TRAI PHAN DOC BAO   -->
+
+        <!-- START phan ben phai bao gom xu huong va bao moi  -->
+        <div class="container_article_right">
+            <h3>New Article</h3>
+            <br>
+            <!-- .............. -->
+            <div class="news_list_right">
+                <div class="left_article"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8170521_cover-thu-nghiem-intel-core-i5-14600k-tinhte.jpg" alt=""></div>
+                <div class="right_article">
+                    <p>Thử nghiệm Intel Core i5-14600K - Cải thiện nhẹ hiệu năng so với Raptor Lake…</p>
+                    
+                </div>
+            </div>
+              <!-- .............. -->
+            <div class="news_list_right">
+                <div class="left_article"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8170714_tinhte-apple4.jpg" alt=""></div>
+                <div class="right_article">
+                    <p>"Quay sự kiện bằng iPhone đẹp lắm", nhưng chỉ có iPhone thì liệu có đủ?…</p>
+                    
+                </div>
+            </div>
+            <!-- .............. -->
+            <div class="news_list_right">
+                <div class="left_article"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8170614_yamaha-mt-09-2024-30-cover.jpg" alt=""></div>
+                <div class="right_article">
+                    <p>Yamaha ra mắt MT-09 2024: Thay đổi đầu đèn và thêm vài nâng cấp nhỏ…</p>
+                    
+                </div>
+            </div>
+            <!-- .............. -->
+            <!-- end phan ben phai bao gom xu huong va bao moi  -->
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+    <!-- END BAI BAO BEN TRAI  -->
+
+ <!-- START FOOTER -->
+ 
+ <footer class="footer-distributed">
+    <div class="footer-left">
+        
+        <h3>NewsReading<span>HCH</span></h3>
+
+        <p class="footer-links">
+            <a href="#">Home</a>
+            |
+            <a href="#">About</a>
+            |
+            <a href="#">Contact</a>
+            |
+            <a href="#">Blog</a>
+        </p>
+        <p class="footer-company-name">Copyright © 2023 <strong>NewsReadingHCH</strong> All rights reserved</p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Ho Chi Minh City</span>
+                HCMUTE</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+91 74**9**258</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>About the company</span>
+            <strong>Sagar Developer</strong> is a Youtube channel where you can find more creative CSS Animations
+            and
+            Effects along with
+            HTML, JavaScript and Projects using C/C++.
+        </p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+ 
+ 
+ <!-- END FOOTER -->
+
+
+
+
+
+<script src="index.js"></script>
+<!-- Start JS cho hieu ung so xuong thanh men nu user -->
+    <script>
+        let subMenu=document.getElementById("subMenu");
+        function toggleMenu()
+        {
+            subMenu.classList.toggle("open_menu");
+        }
+        // Thêm sự kiện click cho toàn bộ tài liệu (document)
+    document.addEventListener("click", function(event) {
+        if (!subMenu.contains(event.target) && event.target !== document.querySelector(".user_pic")) 
+        {
+            // Kiểm tra nếu người dùng click ra ngoài menu hoặc không phải là phần tử ".user_pic"
+            subMenu.classList.remove("open_menu"); // Đóng menu
+        } });
+        
+
+
+
+    </script>
+<!-- END JS cho hieu ung so xuong thanh men nu user -->
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
