@@ -719,14 +719,14 @@ footer {
     width: 100%;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: 850px 400px;
+    grid-template-columns: 850px 320px;
     padding-top:50px;
     padding-left:20px;
 }
 /* style bai bao lisst */
 .news_list_right{
     display: flex; /*chia doi trai phai cot hinh mot ben chu mot ben */
-    width: 310px;
+    width: 320px;
     height: 91px;
     margin-bottom: 30px;
 }
@@ -739,7 +739,7 @@ footer {
     height: 80px;
 }
 .right_article p { /* style phan chu dai ra  */
-    width: 170px;
+    width: 160px;
 }
 
 .right_article p:hover {
