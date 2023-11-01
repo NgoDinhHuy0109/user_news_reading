@@ -69,7 +69,6 @@ li{
 html{
     overflow-x: hidden;
 }
-
 /* start style cac phan tu tren thanh header mau ten cua page */
 
 .header .logo{ /* bao gom : lo go; ten page */
@@ -89,31 +88,30 @@ html{
     width: 2.8rem;
     height: 2.8rem;
     margin-right: 10px;  
+    border-radius: 100%;
 }
 
 .header .logo .logo-name span.hch{
+    font-family: sans-serif;
     color: var(--color-danger);
-    font-size: 20px;
+    font-size: 25px;
 }
 .header .logo .logo-name span{
-    
-    color: var(--dark);
-    font-size: 30px;
+   
+    color: #ffffff;
+    font: normal 50px 'Cookie', cursive;
 }
-
 .header .logo .bx{
     min-width: 60px;
     display: flex;
     justify-header: center;
     font-size: 2.2rem;
 }
-
-
 /* start header kich thuoc vung header*/
 .header nav{
-    height: 56px;
-    background: #ffffff;
-    padding: 0 24px 0 0;
+    height: 66px;
+    background: #2d2a30;
+    padding: 5.5px 24px 0 0;
     display: flex;
     align-items: center;
     grid-gap: 24px;
@@ -121,6 +119,10 @@ html{
     top: 0;
     left: 0;
     z-index: 1000;
+}
+.logo{
+    padding-top: 10px;
+
 }
 
 .header nav::before{
@@ -181,34 +183,11 @@ html{
     border-radius: 0 36px 36px 0;
     cursor: pointer;
 }
-
-.header nav .notif{
-    font-size: 20px;
-    position: relative;
-}
-
-.header nav .notif .count{
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    width: 20px;
-    height: 20px;
-    background: var(--danger);
-    border-radius: 50%;
-    color: var(--light);
-    border: 2px solid var(--light);
-    font-weight: 700;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-header: center;
-}
-
 .header nav .profile img{
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 100%;
 }
  /* phan menu so xuong tu user */
 .sub_menu_wrap{
@@ -229,9 +208,10 @@ html{
 }
 /* day la o mo xuong tu user */
 .sub_menu{
-    background: var(--light);
+    background: #d5d1d1;
     padding: 25px; /*khoang cach le hai ben so voi cai canh bang*/
     margin: 5px;
+    border-radius: 10px;
    
 }
 .user_info{
@@ -360,7 +340,7 @@ font-weight: 600;
 /* <!-- <!-- START 2 bai bao dau tien xep ngang nhau --> --> */
 .fist_container{
     display: grid;
-    grid-template-columns: 580px 300px;
+    grid-template-columns: 580px 300px 300px;
     max-width: 1200px;
     max-height: 450px;
     width: 100%;
@@ -436,7 +416,7 @@ font-weight: 600;
 /* <!-- START 3 bai bao TIEP THEO xep ngang nhau  --> */
 .second_container{
     display: grid;
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: 300px 300px 300px 300px;
     max-width: 1200px;
     max-height: 310px;
     width: 100%;
@@ -545,8 +525,8 @@ footer {
     text-align: left;
 
     font: bold 16px sans-serif;
-    padding: 35px 50px 20px 50px; 
-    margin-top: 80px;
+    padding: 20px 50px 10px 50px; 
+    margin-top: 50px;
 }
 
 .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
