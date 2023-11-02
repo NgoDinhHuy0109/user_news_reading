@@ -737,8 +737,8 @@ footer {
     margin-bottom: 30px;
 }
 .left_article{  /* style cai hinh  bai bao lisst */
-    width: 195px;
-    margin-right: 0.1rem;
+    width: 170px;
+    margin-right: 0.2rem;
 }
 .right_article{/* style phan chu <p> bai bao lisst */
     width: 150px;
@@ -758,7 +758,7 @@ footer {
  
 }
 .news_list_right .left_article img {
-    width: 170px;
+    width: 160px;
     height: 100px;
     border-radius: 10px;
 }
@@ -766,10 +766,71 @@ footer {
 /* style title */
 .title_rp{
     margin-top: 20px;
-    padding-left: 15px;
 }
 .title_rp h1:hover {
     color: red; /* Change the color to your desired color */
+}
+/* .................... */
+
+/* style icon tac gia va ngay dang  */
+.author_form{
+    display: flex; /*chia doi trai phai cot hinh mot ben chu mot ben */
+    width: 242px;
+    height: 48px;
+    margin-top: 20px;
+}
+.left_author{  /* style cai hinh  bai bao lisst */
+    width: 55px;
+    height: 40px;
+    /* margin-right: ; */
+}
+.author_form .left_author img {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: var(--avatar-background-dark);
+    border: 2px solid #0768ea;
+
+} 
+/* chinh sua hinh dau tich xanh */
+.author_form .right_author i  {
+    color: #0768ea;
+    margin-left: 7px;
+}
+.author_form .right_author a{
+    color: #0768ea;
+    font-size:larger;
+    font-weight: bold;
+}
+
+.author_form .right_author .date_update{ /* style phan chu ngay cap nhat */
+text-align: left;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Roboto",serif;
+text-decoration: none;
+}
+
+.right_author{/* style phan chu <p> bai bao lisst */
+    width: 187px;
+    height: 40px;
+    /*tao displayfex <colum de xep theo hang <flex star canh trai >> */
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+
+}
+.right_author p:hover {
+    /* Kiểu dáng khi hover */
+    color: #ff0000; /* Màu văn bản khi hover */
+    cursor: pointer;
+ 
 }
 
 
