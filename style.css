@@ -113,7 +113,7 @@ html{
 
 .header .logo .logo-name span.hch{
     font-family: sans-serif;
-    color: var(--color-danger);
+    color: #e0ac1c;
     font-size: 25px;
 }
 .header .logo .logo-name span{
@@ -162,7 +162,7 @@ html{
 
 .header nav .bx.bx-menu{
     cursor: pointer;
-    color: var(--dark);
+    color: var(--color-danger);
 }
 
 .header nav form{
@@ -189,14 +189,15 @@ html{
     color: var(--dark);
 }
 
-.header nav form .form-input button{
-    width: 80px;
+.header nav form .form-input button{ /* phan tim kiem mau hong */
+    padding-left: 1rem;
+    width: 70px;
     height: 100%;
     display: flex;
     justify-header: center;
     align-items: center;
-    background: var(--color-danger);
-    color: var(--light);
+    background: #d5d1d1;
+    color: #151313;
     font-size: 18px;
     border: none;
     outline: none;
@@ -731,15 +732,16 @@ footer {
     margin-bottom: 30px;
 }
 .left_article{  /* style cai hinh  bai bao lisst */
-    width: 250px;
-    margin-right: 0.5rem;
+    width: 195px;
+    margin-right: 0.1rem;
 }
 .right_article{/* style phan chu <p> bai bao lisst */
     width: 150px;
     height: 80px;
+    text-align:left;
 }
 .right_article p { /* style phan chu dai ra  */
-    width: 160px;
+    width: 100%;
 }
 
 .right_article p:hover {
@@ -754,5 +756,15 @@ footer {
     border-radius: 10px;
 }
 /* START STYLE PHAN BEN TRAI READPAGE.HTML */
+/* style title */
+.title_rp{
+    margin-top: 20px;
+    padding-left: 15px;
+}
+.title_rp h1:hover {
+    color: red; /* Change the color to your desired color */
+}
+
+
 
 /* END STYLE READPAGE.HTML */
