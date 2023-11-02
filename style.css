@@ -345,7 +345,7 @@ font-weight: 600;
     height: 2.8px; /* Set the initial height of the line */
     bottom: 0;
     left: 0;
-    background-color: var(--Red); /* Set the color of the line */
+    background-color: #e0ac1c; /* Set the color of the line */
     transform: scaleX(0); /* Initially, the line has zero width */
     transform-origin: 0 100%; /* Set the transform origin to the left */
     transition: transform 0.3s; /* Add a smooth width transition on hover */
@@ -636,7 +636,7 @@ footer {
 }
 
 .footer-distributed .footer-center p a {
-    color: #e0ac1c;
+    color: #ffffff;
     text-decoration: none;
     
 }
@@ -723,6 +723,7 @@ footer {
     grid-template-columns: 820px 300px;
     padding-top:50px;
     padding-left:20px;
+    padding-right: 10px;
 
     /* box-sizing: border-box;
     width: 100%;
@@ -746,6 +747,8 @@ footer {
 }
 .right_article p { /* style phan chu dai ra  */
     width: 100%;
+    text-align: justify;
+
 }
 
 .right_article p:hover {
