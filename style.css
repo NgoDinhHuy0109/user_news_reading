@@ -837,6 +837,222 @@ text-decoration: none;
     cursor: pointer;
  
 }
+/* start form emotion */
+.emotion_form{
+    width: 90%;
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.emotion_form .emotion_left {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;  /* cac phan tu nam giua tren va duoi */
+}
+.emotion_form .emotion_left .total_reactions .icon_emotion {
+    display: flex;
+    align-items: flex-end;
+    font-size: 20px;
+  border: none;
+
+}
+
+.emotion_form .emotion_right i {
+    font-size: 5px;
+}
+/* end form emotion */
+
+/* start form interract*/
+.interact_form{
+    width: 90%;
+    height: 39px;
+    border-top: 1px solid #999797;
+    border-bottom: 1px solid #999797;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.interact_form .love_emotion {
+    width: 30%;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.interact_form .love_emotion .love_btn {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+  border: none;
+}
+.love_btn i {
+    margin-right: 0.2em; /* Khoảng cách 1 ký tự (em) giữa phần tử <i> và <span> */
+}
+.love_btn {
+    background-color: #fff;
+}
+
+.love_emotion .love_btn {
+    background-color: transparent; /* Màu nền ban đầu, có thể là trong suốt hoặc màu khác tùy ý */
+    transition: background-color 0.3s; /* Tạo hiệu ứng chuyển đổi màu nền với độ trễ 0.3 giây */
+}
+
+.love_emotion .love_btn:hover {
+    background-color: #e8e4e4; /* Màu nền khi rê chuột vào, thay đổi thành màu khác tùy ý */
+}
+
+/* end form interract*/
+/* <!-- START PHAN VIET COMMENT  --> */
+.cmt_form {
+    width: 90%;
+    height: 140px;
+    margin: 10px 0;
+    padding: 12px 0;
+    display: flex;
+    align-items:flex-start;
+}
+.cmt_form .rightcmt_form{
+    width: 100%;
+   
+}
+.cmt_form .leftcmt_form{
+    padding-top: 10px;
+
+}
+
+.cmt_form .leftcmt_form img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 1px;
+}
+.cmt_form .rightcmt_form input {
+        /* background-color: aqua; */
+        font-family: "Roboto",serif;
+        font-size: 1.375rem;
+        margin-top: 10px;
+        width: 95%;
+        height:90px;
+        padding: 15px 15px 15px 35px ;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        border: #999797 solid 1.8px;
+        font-size: 20px;
+}
+.article_form input:focus{
+    outline: none;
+}
+.rightcmt_form {
+    position: relative;
+}
+
+
+/* <!style o button send  --> */
+.rightcmt_form input[type="text"] {
+    width: 100%; /* Đảm bảo ô input chiếm toàn bộ chiều rộng */
+}
+.rightcmt_form button {
+    position: absolute;
+    bottom: 8.5px;
+    right: 10.5px;
+    background: #dddee1;
+    color: #000000;
+    border: 1.5px solid #999797;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #b4b7b9;
+    color: #fff;
+}
+/* <!--END PHAN VIET COMMENT  --> */
+/* <!-- START hien thi COMMENT  --> */
+.righttlcmt_form{
+    /* background-color: aqua; */
+    font-family: "Roboto",serif;
+    font-size: 1.375rem;
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+.tl_cmt {
+    /* background-color: aqua; */
+    font-family: "Roboto",serif;
+    font-size: 1.375rem;
+    margin-top: 10px;
+    width: 95%;
+    border-radius: 10px;
+    border: #999797 solid 1.8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* Giới hạn chiều rộng tối đa của .tl_cmt */
+    overflow: hidden; /* Ẩn nội dung ra ngoài phạm vi .tl_cmt nếu tràn ra */
+}
+
+.tl_cmt p {
+    /* CSS cho chữ bên trong thẻ p trong .tl_cmt */
+    font-size: 16px; /* Kích thước chữ */
+    color: #101010; /* Màu chữ */
+    line-height: 1.5; /* Độ cao dòng */
+    margin: 0; /* Loại bỏ khoảng cách xung quanh */
+    text-align:justify; /* Căn giữa nội dung văn bản */
+
+
+}
+
+.name_author p {
+    font-weight: bold;
+    color: #0074d9;
+}
+.tuongtac_cmt {
+    font-size: 18px;
+    margin-left:  10px;
+    margin-top: 5px;
+}
+.tuongtac_cmt i {
+    margin-right: 5px;
+}
+/* hover doi mau hinh trai tim  */
+.tuongtac_cmt i.fa-heart {
+    color: rgb(7, 7, 7); /* Màu mặc định cho icon trái tim */
+    transition: color 0.3s; /* Thời gian chuyển đổi màu */
+}
+
+.tuongtac_cmt:hover i.fa-heart {
+    color: rgb(241, 10, 10); /* Màu khi hover */
+}
+
+
+/* <!--END PHAN hien thi  COMMENT  --> */
 
 
 
