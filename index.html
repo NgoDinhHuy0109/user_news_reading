@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>New Reading</title>
 <!-- ............................................. -->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 </head>
@@ -29,8 +30,11 @@
                     <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
                 </div>
             </form>
-            <input type="checkbox" id="theme-toggle" hidden>
-            <label for="theme-toggle" class="theme-toggle"></label>
+            <!-- start nut dang bai viet  -->
+            <button type="#" id="pop_up"
+            class=" navbar_btn">Write Posts</button>
+            <!-- end nut dang bai  -->
+           
             <a href="#" class="profile">
                 <img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/240678687_104504855343775_2646762940003537912_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFNhwymFlAQ6xx5OxgdlK5k3boizSXug97duiLNJe6D3h3d7IkA8JTdvIQ2k7lHaLgROpNV3Ad5xcNblQEG4gLS&_nc_ohc=WVdZhtAb810AX9FnZOf&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfCKtQ74hZbCX1xJ3C9sMW_duSPukLQ3MSNxQbbQrPwrog&oe=65478F37" class="user_pic" onclick="toggleMenu()">
             </a>
@@ -57,12 +61,62 @@
     </div>
  <!--END _ HEADER-HEADER-HEADER-HEADER-HEADER -->
 
+
+
+ <!-- START POP UP  -->
+ <div class="popup">
+    <div class="popup-content">
+        <img src="images/close.png" alt="Close" class="close">
+        <div class="form_post">
+            <div class="form_post_top">
+                <h1> Create Articles</h1>
+                <hr>
+            </div>
+            <!-- .................../.. -->
+           <div class="title_post">
+            <input type="text" placeholder="Enter post title.....">
+           </div>
+             <!-- .................../.. -->
+             <div class="container">
+                <input type="file" id="file" accept="image/*" hidden >
+                <div class="img-area" data-img="">
+                    <i class='bx bxs-cloud-upload icon'></i>
+                    <h3>Upload Image</h3>
+                    <p>Image size must be less than <span>2MB</span></p>
+            
+                </div>
+                <button class="select-image">Select Image</button>
+            </div>
+           
+             <!-- .................../.. -->
+              <!-- .................../.. -->
+           <div class="content_post">
+            <input type="text" placeholder="Enter post content.....">
+           </div>
+           <hr>
+           <br>
+             <!-- .................../.. -->
+             <div class="bottom_post">
+                <label for="upload" class="custom-label">Post</label>
+             </div>
+
+        </div>
+
+
+    </div>
+
+ </div>
+
+
+
+ <!-- END POP UP  -->
+
 <!-- START PHAN CAC NUT DUOI HEADER  -->
 
 <div class="menu_container">
     <nav>
         <ul>
-            <li><a href="#">Home Page </a></li>
+            <li><a href="#" id="">Home Page </a></li>
             <li><a href="#">Category </a></li>
         </ul>
     </nav>
@@ -171,9 +225,7 @@
 
 </div>
 
-
 <!-- END 3 bai bao TIEP THEO xep ngang nhau  -->
-
 <!-- START NEWS_LIST -->
 <div class="list_container">
 <div class="news_list">
@@ -226,11 +278,6 @@
 </div>
 
 <!-- END NEWS_LIST -->
-
-
-
-
-
  <!-- START FOOTER -->
 
 <footer class="footer-distributed">
@@ -291,28 +338,13 @@
 
 
 
+<!-- phần JS-phần JS--phần JS--phần JS--phần JS--phần JS- -->
 
-<script src="index.js"></script>
-<!-- Start JS cho hieu ung so xuong thanh men nu user -->
-    <script>
-        let subMenu=document.getElementById("subMenu");
-        function toggleMenu()
-        {
-            subMenu.classList.toggle("open_menu");
-        }
-        // Thêm sự kiện click cho toàn bộ tài liệu (document)
-    document.addEventListener("click", function(event) {
-        if (!subMenu.contains(event.target) && event.target !== document.querySelector(".user_pic")) 
-        {
-            // Kiểm tra nếu người dùng click ra ngoài menu hoặc không phải là phần tử ".user_pic"
-            subMenu.classList.remove("open_menu"); // Đóng menu
-        } });
-        
+<script src="script.js"></script>
 
 
 
-    </script>
-<!-- END JS cho hieu ung so xuong thanh men nu user -->
+
 </body>
 
 </html>

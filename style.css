@@ -46,7 +46,26 @@
     --linear-gradient: (45deg, #f06, #h3cf, #f06);
     --smooth: all .3s ease-in;
 }
+/* start style cac nut button */
 
+.navbar_btn:hover{
+    background-color: #eac45c;
+    transition: var(--smooth);
+}
+.navbar_btn{
+    text-align: center;
+    color: #fff;
+    padding: .6rem 1rem;   /* tuy chinh kich thuoc cua vien button */
+    border-radius: 100px;     /* bo tron nut button*/
+    cursor: pointer;
+    transition: var(--smooth);
+    font-size: 1rem;
+    background-color: #e0ac1c;
+    margin-left: 45px;
+    width: 150px;
+    min-height: auto;
+}
+/* end style cac nut button */
 *{
     margin: 0;
     padding: 0;
@@ -1000,6 +1019,7 @@ button:hover {
 }
 .tl_cmt {
     /* background-color: aqua; */
+    background-color: #dddee1;
     font-family: "Roboto",serif;
     font-size: 1.375rem;
     margin-top: 10px;
@@ -1054,6 +1074,189 @@ button:hover {
 
 /* <!--END PHAN hien thi  COMMENT  --> */
 
+/*  start pop up */
+.popup{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+.popup-content{
+    height: 650px;
+    width: 800px;
+    background: #fff;
+    padding: 10px ;
+    border-radius: 5px;
+    position: relative;
+}
+.form_post {
+    width: 100%;
+    height:100% ;
+    position: relative;
+}
+
+.popup .popup-content .close {
+    position:absolute;
+   top: -15px;
+   right: -15px;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   cursor: pointer;
+}
+.popup.active {
+    display: block;
+}
+.form_post_top{
+    width: 100%;
+    height: 30px;
+}
+
+/* style ô input nhập tiêu đề */
+.title_post input {
+    border: none; /* Loại bỏ viền */
+    outline: none; /* Loại bỏ viền màu xanh khi input được chọn */
+    background-color: transparent; /* Loại bỏ nền mặc định */
+    width: 100%; /* Đặt chiều rộng cho input */
+    height: 100px;
+    padding: 2px; /* Thêm padding để tạo khoảng cách với nội dung */
+    font-size: 20px; /* Đặt kích thước phông chữ */
+    font-weight: bold;
+}
+/* style ô input nhập tiêu đề */
+.content_post input {
+    border: none; /* Loại bỏ viền */
+    outline: none; /* Loại bỏ viền màu xanh khi input được chọn */
+    background-color: transparent; /* Loại bỏ nền mặc định */
+    width: 100%; /* Đặt chiều rộng cho input */
+    height: 200px;
+    padding: 2px; /* Thêm padding để tạo khoảng cách với nội dung */
+    font-size: 20px; /* Đặt kích thước phông chữ */
+    white-space: pre-wrap;
+}
+.form_post hr {
+    border: none;
+    border-top: 1px solid #ccc; /* Đổi màu thành xám (#ccc) */
+
+}
+
+/*start  style o them anh cho bai dang  */
+
+.container {
+	max-width: 400px;
+	width: 100%;
+	background: #fff;
+	padding: 30px;
+	border-radius: 30px;
+}
+.img-area {
+	position: relative;
+	width: 100%;
+	height: 240px;
+	background: var(--grey);
+	margin-bottom: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.img-area .icon {
+	font-size: 100px;
+}
+.img-area h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+}
+.img-area p {
+	color: #999;
+}
+.img-area p span {
+	font-weight: 600;
+}
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 100;
+}
+.img-area::before {
+	content: attr(data-img);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: 200;
+}
+.img-area.active:hover::before {
+	opacity: 1;
+}
+.select-image {
+	display: block;
+	width: 100%;
+	padding: 16px 0;
+	border-radius: 15px;
+	background: #e0ac1c;
+	color: #fff;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.select-image:hover {
+	background: #e7c976;
+}
+
+/* end style class them anh bai dang  */
+/* stlye buttom post */
+.custom-label {
+    background-color: #e0ac1c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+#preview {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+}
+
+/* end pop up */
 
 
 /* END STYLE READPAGE.HTML */
+
+
+
+
+
+
+
