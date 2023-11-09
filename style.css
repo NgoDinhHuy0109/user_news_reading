@@ -1074,13 +1074,13 @@ button:hover {
 
 /* <!--END PHAN hien thi  COMMENT  --> */
 
-/*  start pop up */
+/*  start pop up *//*  start pop up */
 .popup{
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Đặt chiều cao tối đa là chiều cao của trình duyệt */
     position: absolute;
-    top: 15px;
+    top: 18px;
     display: none;
     justify-content: center;
     align-items: center;
@@ -1088,23 +1088,29 @@ button:hover {
     z-index: 2;
 }
 .popup-content{
-    height: 650px;
+     max-height: 100%; /* Đảm bảo chiều cao tối đa là 100% của phần tử cha */
+    height: 677px;
     width: 800px;
     background: #fff;
     padding: 10px ;
     border-radius: 5px;
     position: relative;
 }
+/* form chua cac div trong popup _ con cua div popyp */
 .form_post {
     width: 100%;
     height:100% ;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .popup .popup-content .close {
     position:absolute;
-   top: -15px;
-   right: -15px;
+   top: -4px;
+   right: -4px;
    width: 30px;
    height: 30px;
    border-radius: 50%;
@@ -1116,6 +1122,7 @@ button:hover {
 .form_post_top{
     width: 100%;
     height: 30px;
+    margin-top: 10px;
 }
 
 /* style ô input nhập tiêu đề */
@@ -1130,7 +1137,7 @@ button:hover {
     font-weight: bold;
 }
 /* style ô input nhập tiêu đề */
-.content_post input {
+.content_post textarea {
     border: none; /* Loại bỏ viền */
     outline: none; /* Loại bỏ viền màu xanh khi input được chọn */
     background-color: transparent; /* Loại bỏ nền mặc định */
@@ -1139,6 +1146,7 @@ button:hover {
     padding: 2px; /* Thêm padding để tạo khoảng cách với nội dung */
     font-size: 20px; /* Đặt kích thước phông chữ */
     white-space: pre-wrap;
+    resize: none; /* Tắt khả năng thay đổi kích thước của textarea bằng chuột */
 }
 .form_post hr {
     border: none;
@@ -1149,18 +1157,22 @@ button:hover {
 /*start  style o them anh cho bai dang  */
 
 .container {
-	max-width: 400px;
+    margin-left: 30%;
+	max-width: 300px;
 	width: 100%;
 	background: #fff;
-	padding: 30px;
+	padding: 10px;
 	border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
 }
 .img-area {
 	position: relative;
 	width: 100%;
-	height: 240px;
+	height: 200px;
 	background: var(--grey);
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	border-radius: 15px;
 	overflow: hidden;
 	display: flex;
@@ -1169,12 +1181,12 @@ button:hover {
 	flex-direction: column;
 }
 .img-area .icon {
-	font-size: 100px;
+	font-size: 70px;
 }
 .img-area h3 {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 500;
-	margin-bottom: 6px;
+	margin-bottom: 4px;
 }
 .img-area p {
 	color: #999;
@@ -1216,13 +1228,13 @@ button:hover {
 }
 .select-image {
 	display: block;
-	width: 100%;
-	padding: 16px 0;
+	width: 50%;
+	padding: 10px 0;
 	border-radius: 15px;
 	background: #e0ac1c;
 	color: #fff;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 15px;
 	border: none;
 	cursor: pointer;
 	transition: all .3s ease;
@@ -1239,6 +1251,12 @@ button:hover {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+.custom-label:hover {
+	background: #e7c976;
+}
+.bottom_post{
+    margin-bottom: 20px;
 }
 
 
