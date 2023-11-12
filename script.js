@@ -53,3 +53,124 @@ document.querySelector('#file').addEventListener('change', function () {
 })
 
 // <!-- end phan them anh vao bai dang  -->
+
+// <!-- script font size -->
+
+    function execCommand(command) {
+      document.execCommand(command, false, null);
+      updateButtonState(command);
+    }
+
+    function updateButtonState(command) {
+      const buttonId = command + 'Btn';
+      const button = document.getElementById(buttonId);
+
+      if (button) {
+        const isActive = document.queryCommandState(command);
+        button.classList.toggle('active', isActive);
+      }
+    }
+
+    function changeFontSize(size) {
+      document.execCommand('fontSize', false, size);
+    }
+    // <!-- END  script font size -->
+// script chuc nang dan anh vo o nhap 
+    function execCommand(command, value = null) {
+      document.execCommand(command, false, value);
+    }
+
+    function insertList(type) {
+      document.execCommand(type);
+    }
+
+    function changeFontSize(size) {
+      execCommand('fontSize', size);
+    }
+
+    function insertImage() {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = handleImageUpload;
+      input.click();
+    }
+
+    function handleImageUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+
+          // Cho phép người dùng nhập kích thước
+          const width = prompt("Enter width (in pixels):", "300");
+          const height = prompt("Enter height (in pixels):", "200");
+
+          // Áp dụng kích thước mong muốn
+          img.style.width = `${width}px`;
+          img.style.height = `${height}px`;
+
+          // Cho phép kéo ảnh đi lòng vòng
+          const draggable = new Draggabilly(img);
+
+          document.getElementById('editor').appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+    // END script chuc nang dan anh vo o nhap 
+
+//START  dan lik vao o nhap 
+    function execCommand(command, value = null) {
+      document.execCommand(command, false, value);
+    }
+
+    function insertList(type) {
+      document.execCommand(type);
+    }
+
+    function changeFontSize(size) {
+      execCommand('fontSize', size);
+    }
+
+    function insertImage() {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = handleImageUpload;
+      input.click();
+    }
+
+    function handleImageUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+
+          // Cho phép người dùng nhập kích thước
+          const width = prompt("Enter width (in pixels):", "300");
+          const height = prompt("Enter height (in pixels):", "200");
+
+          // Áp dụng kích thước mong muốn
+          img.style.width = `${width}px`;
+          img.style.height = `${height}px`;
+
+          document.getElementById('editor').appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function insertLink() {
+      const url = prompt("Enter the URL:");
+      if (url) {
+        execCommand('createLink', url);
+      }
+    }
+
+//END dan lik vao o nhap 
+

@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <title>New Reading</title>
 <!-- ............................................. -->
+<!-- thu vien tuy chinh kich thuoc anh trong o nhap script -->
+<link rel="stylesheet" href="https://unpkg.com/@xylphid/resizable/style.css" />
+<script src="https://unpkg.com/@xylphid/resizable/index.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/draggabilly/dist/draggabilly.css" />
+<script src="https://unpkg.com/draggabilly/dist/draggabilly.pkgd.min.js"></script>
+<!-- Thêm thư viện Font Awesome vào trang của bạn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -34,7 +42,7 @@
             <button type="#" id="pop_up"
             class=" navbar_btn">Write Posts</button>
             <!-- end nut dang bai  -->
-           
+          
             <a href="#" class="profile">
                 <img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/240678687_104504855343775_2646762940003537912_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFNhwymFlAQ6xx5OxgdlK5k3boizSXug97duiLNJe6D3h3d7IkA8JTdvIQ2k7lHaLgROpNV3Ad5xcNblQEG4gLS&_nc_ohc=WVdZhtAb810AX9FnZOf&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfCKtQ74hZbCX1xJ3C9sMW_duSPukLQ3MSNxQbbQrPwrog&oe=65478F37" class="user_pic" onclick="toggleMenu()">
             </a>
@@ -62,7 +70,6 @@
  <!--END _ HEADER-HEADER-HEADER-HEADER-HEADER -->
 
 
-
  <!-- START POP UP  -->
  <div class="popup">
     <div class="popup-content">
@@ -88,31 +95,73 @@
                 <button class="select-image">Select Image</button>
             </div>
            
-             <!-- .................../.. -->
-              <!-- .................../.. -->
+             <!-- .....dinh dang phong chu ......./.. -->
+             <div class="edit_word">
+                <ul class="icon_editw" >
+                    <!-- ........................................... -->
+                        <div class="font-size-dropdown">
+                          <label for="fontSize">Font Size:</label>
+                          <select id="fontSize" onchange="changeFontSize(this.value)">
+                            <option value="2">Small</option>
+                            <option value="3">Normal</option>
+                            <option value="4">Large</option>
+                            <option value="5">Large_1</option>
+                            <option value="6">Large_2</option>
+                          </select>
+                        </div>
+                         <!-- ........................................... -->
+                    <li class="tooltip-container" >
+                        <button onclick="execCommand('bold')"><i class="fa-solid fa-bold"></i></button>
+                        <div class="tooltip">Bold</div>
+                      </li>
+                      <!-- ........................................... -->
+                      <li class="tooltip-container">
+                        <button onclick="execCommand('italic')"><i class="fa-solid fa-italic"></i></button>
+                        <div class="tooltip">Italic</div>
+                      </li>
+                       <!-- ........................................... -->
+                       <li class="tooltip-container">
+                        <button onclick="execCommand('underline')"><i class="fa-solid fa-underline"></i></button>
+                        <div class="tooltip">Under Line</div>
+                      </li>
+                       <!-- ........................................... -->
+                       <li class="tooltip-container">
+                        <button onclick="insertImage()"><i class="fa-solid fa-image"></i></button>
+                        <div class="tooltip">Insert Image</div>
+                      </li>
+                      <!-- ........................................... -->
+                      <li class="tooltip-container">
+                        <button onclick="insertLink()"><i class="fa-solid fa-link"></i></button>
+                        <div class="tooltip">Insert Link</div>
+                      </li>
+                      <!-- ........................................... -->
+                      <!-- <li class="tooltip-container" onclick="insertList('ul')">
+                        <button onclick="execCommand('insertunorderedlist')"><img src="images/list.png" alt=""></button>
+                        <div class="tooltip">Bulleted List</div>
+                      </li> -->
+                       <!-- ........................................... -->
+                       <!-- <li class="tooltip-container" onclick="insertNumberedList()">
+                        <button><i class="fa-solid fa-list-ol"></i></button>
+                        <div class="tooltip">Numbered List</div>
+                      </li> -->
+                       <!-- ........................................... -->
+                       
+                </ul>
+             </div>
+              <!-- ...............ô nhập văn bản ..../.. -->
            <div class="content_post">
-            <textarea placeholder="Enter post content....."></textarea>
+            <div id="editor" contenteditable="true"></div>
            </div>
-           <hr>
            <br>
              <!-- .................../.. -->
              <div class="bottom_post">
                 <label for="upload" class="custom-label">Post</label>
              </div>
-
         </div>
-
-
     </div>
-
  </div>
-
-
-
  <!-- END POP UP  -->
-
 <!-- START PHAN CAC NUT DUOI HEADER  -->
-
 <div class="menu_container">
     <nav>
         <ul>
@@ -159,22 +208,10 @@
              </a>
         </div>
     </div>
-
-
-    
-    
-   
 </div>
-
-
-
 <!-- END 2 bai bao dau tien xep ngang nhau  -->
-
 <!-- START 3 bai bao TIEP THEO xep ngang nhau  -->
-
 <div class="second_container">
-
-    
     <div class="second_1">
         <div class="top_second"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8168933_cover-re.jpg" alt=""></div>
         <div class="bottom_second">
@@ -185,7 +222,6 @@
              </a>
         </div>
     </div>
-
 
     <div class="second_1">
         <div class="top_second"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8164810_Cover-dat-bike.jpg" alt=""></div>
@@ -198,18 +234,6 @@
         </div>
     </div>
 
-
-
-    <div class="second_1">
-        <div class="top_second"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8168933_cover-re.jpg" alt=""></div>
-        <div class="bottom_second">
-            <h3>Chơi Resident Evil Village trên iPhone 15 Pro Max: Vẫn chỉ có Capcom là thương Apple nhất</h3>
-             <a target="_blank" href="https://tinhte.vn/profile/pw.2452461/" rel="noreferrer" class="jsx-1509373995">
-                <img src="https://photo2.tinhte.vn/data/avatars/m/2452/2452461.jpg?1653405194" >
-                <span class="jsx-3594291015 author">P.W</span>
-             </a>
-        </div>
-    </div>
     <div class="second_1">
         <div class="top_second"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8168933_cover-re.jpg" alt=""></div>
         <div class="bottom_second">
@@ -221,10 +245,17 @@
         </div>
     </div>
 
-
-
+    <div class="second_1">
+        <div class="top_second"><img src="https://photo2.tinhte.vn/data/attachment-files/2023/10/8168933_cover-re.jpg" alt=""></div>
+        <div class="bottom_second">
+            <h3>Chơi Resident Evil Village trên iPhone 15 Pro Max: Vẫn chỉ có Capcom là thương Apple nhất</h3>
+             <a target="_blank" href="https://tinhte.vn/profile/pw.2452461/" rel="noreferrer" class="jsx-1509373995">
+                <img src="https://photo2.tinhte.vn/data/avatars/m/2452/2452461.jpg?1653405194" >
+                <span class="jsx-3594291015 author">P.W</span>
+             </a>
+        </div>
+    </div>
 </div>
-
 <!-- END 3 bai bao TIEP THEO xep ngang nhau  -->
 <!-- START NEWS_LIST -->
 <div class="list_container">
@@ -276,22 +307,15 @@
     </div>
 </div>
 </div>
-
 <!-- END NEWS_LIST -->
  <!-- START FOOTER -->
-
 <footer class="footer-distributed">
     <div class="footer-left">
-        
         <h3>NewsReading<span>HCH</span></h3>
-
         <p class="footer-links">
             <a href="#">Home</a>
-            |
             <a href="#">About</a>
-            |
             <a href="#">Contact</a>
-            |
             <a href="#">Blog</a>
         </p>
         <p class="footer-company-name">Copyright © 2023 <strong>NewsReadingHCH</strong> All rights reserved</p>
@@ -341,6 +365,9 @@
 <!-- phần JS-phần JS--phần JS--phần JS--phần JS--phần JS- -->
 
 <script src="script.js"></script>
+<script src="https://unpkg.com/@xylphid/resizable/index.js"></script>
+
+
 
 
 

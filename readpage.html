@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>New Reading</title>
+    <title>Read Page</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <!-- Thêm thư viện Font Awesome vào trang của bạn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -159,26 +159,6 @@
 
                 <!-- LINH TINH -->
 
-                
-
-                
-
-
-                <!-- LINH TINH -->
-
-               
-
-              
-
-               
-
-
-            
-
-
-
-
-
         </div>
         <!-- end phan ben TRAI PHAN DOC BAO   -->
 
@@ -217,8 +197,6 @@
     </div>
 
 </div>
-
-
 
 
     <!-- END BAI BAO BEN TRAI  -->
@@ -282,27 +260,10 @@
 
 
  <script src="https://kit.fontawesome.com/a99fda8b90.js" crossorigin="anonymous"></script> 
-<script src="index.js"></script>
-<!-- Start JS cho hieu ung so xuong thanh men nu user -->
-    <script>
-        let subMenu=document.getElementById("subMenu");
-        function toggleMenu()
-        {
-            subMenu.classList.toggle("open_menu");
-        }
-        // Thêm sự kiện click cho toàn bộ tài liệu (document)
-    document.addEventListener("click", function(event) {
-        if (!subMenu.contains(event.target) && event.target !== document.querySelector(".user_pic")) 
-        {
-            // Kiểm tra nếu người dùng click ra ngoài menu hoặc không phải là phần tử ".user_pic"
-            subMenu.classList.remove("open_menu"); // Đóng menu
-        } });
-        
+<script src="script.js"></script>
 
 
 
-    </script>
-<!-- END JS cho hieu ung so xuong thanh men nu user -->
 </body>
 
 </html>

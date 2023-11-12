@@ -1084,7 +1084,7 @@ button:hover {
     display: none;
     justify-content: center;
     align-items: center;
-    text-align: center;
+ 
     z-index: 2;
 }
 .popup-content{
@@ -1092,7 +1092,8 @@ button:hover {
     height: 677px;
     width: 800px;
     background: #fff;
-    padding: 10px ;
+    padding: 5px ;
+    padding-top: 20px;
     border-radius: 5px;
     position: relative;
 }
@@ -1104,15 +1105,15 @@ button:hover {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .popup .popup-content .close {
     position:absolute;
-   top: -4px;
-   right: -4px;
-   width: 30px;
-   height: 30px;
+   top: -9px;
+   right: -17px;
+   width: 35px;
+   height: 35px;
    border-radius: 50%;
    cursor: pointer;
 }
@@ -1121,8 +1122,14 @@ button:hover {
 }
 .form_post_top{
     width: 100%;
-    height: 30px;
-    margin-top: 10px;
+    height: 0px;
+    font-size: 15px;
+    margin-top: -15px;
+}
+.title_post {
+    width: 100%; /* Đặt chiều rộng cho input */
+    height: 100px;
+
 }
 
 /* style ô input nhập tiêu đề */
@@ -1133,7 +1140,7 @@ button:hover {
     width: 100%; /* Đặt chiều rộng cho input */
     height: 100px;
     padding: 2px; /* Thêm padding để tạo khoảng cách với nội dung */
-    font-size: 20px; /* Đặt kích thước phông chữ */
+    font-size: 25px; /* Đặt kích thước phông chữ */
     font-weight: bold;
 }
 /* style ô input nhập tiêu đề */
@@ -1142,7 +1149,7 @@ button:hover {
     outline: none; /* Loại bỏ viền màu xanh khi input được chọn */
     background-color: transparent; /* Loại bỏ nền mặc định */
     width: 100%; /* Đặt chiều rộng cho input */
-    height: 200px;
+    height: 260px;
     padding: 2px; /* Thêm padding để tạo khoảng cách với nội dung */
     font-size: 20px; /* Đặt kích thước phông chữ */
     white-space: pre-wrap;
@@ -1160,8 +1167,9 @@ button:hover {
     margin-left: 30%;
 	max-width: 300px;
 	width: 100%;
+    margin-top: -35px;
 	background: #fff;
-	padding: 10px;
+	padding: 5px;
 	border-radius: 30px;
     display: flex;
     align-items: center;
@@ -1258,23 +1266,124 @@ button:hover {
 .bottom_post{
     margin-bottom: 20px;
 }
-
-
-
 #preview {
     max-width: 100%;
     max-height: 300px;
     margin-top: 20px;
 }
+/* edit chu  */
+.edit_word{
+    width: 100%;
+    height:38px;   
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f2f2f2;
+    display: flex;
 
-/* end pop up */
+}
+
+/* style vi tri cua div boc cac icon */
+.edit_word .icon_editw{
+    display: inline-flex;
+    padding: 2px;
+}
+/* style vi tri cac icon trong tung o cua no */
+.edit_word .icon_editw li {
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #b3b3b3;
+    border-radius: 4px;
+   padding: 1px;
+    background: #fff;
+    height: 32px;
+    width: 37px;
+    margin-right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit_word .icon_editw li i{
+    width: 34px;
+    height: 30px;
+    text-decoration: none;
+    color: #0c0c0c; /* Màu chữ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; /* Định dạng chữ in đậm */
+}
+.edit_word .icon_editw li img{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.active, .edit_word .icon_editw li a:hover{
+    background: #dad5d5;
+}
+
+/* bang chu thich hien thi khi hover chuot qua */
+.tooltip-container {
+    position: relative;
+}
+  .tooltip-container:hover .tooltip {
+    display: block;
+}
+  .tooltip {
+    width: fit-content;
+    height: fit-content;
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 8px;
+    background-color: #333;
+    color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap; /* Ngăn chú thích xuống dòng */
+  }
+.font-size-dropdown {
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    font-size: 18px;
+}
+/* phan so xuong size phong chu */
+.font-size-dropdown select {
+    width: auto;
+    height: 32px;
+    margin-left: 2px;
+}
+.content_post {
+    max-width: 100%; /* Đặt chiều rộng tối đa cho phần nội dung */
+    height: 262px;
+    margin: 3px;
+      /* Canh giữa phần nội dung */
+      /* Khoảng cách giữa lề và nội dung */
+  }
+  
+  #editor {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 260px;
+    padding: 10px;     /* Khoảng cách giữa đường viền và nội dung trong #editor */
+    overflow: auto; /* Thêm thanh cuộn khi nội dung vượt quá kích thước */
+    background-color: #fff; /* Màu nền */
+    border-radius: 5px; /* Bo tròn các góc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  }
+  
+  #editor:focus {
+    outline: none; /* Loại bỏ đường viền khi phần tử được focus */
+    border-color: #e0ac1c; /* Đổi màu đường viền khi phần tử được focus */
+  }
+  .link-input {
+    display: none;
+  }
+/* end pop up *//* end pop up *//* end pop up *//* end pop up */
 
 
 /* END STYLE READPAGE.HTML */
-
-
-
-
-
-
-
